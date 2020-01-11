@@ -1,3 +1,3 @@
 # Ionic Pokédex
 
-"# Ionic-Pok-dex" 
+"# Ionic-Pokedex" 
