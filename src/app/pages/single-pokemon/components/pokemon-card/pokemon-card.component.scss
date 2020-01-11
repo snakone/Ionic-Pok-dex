@@ -1,0 +1,19 @@
+ion-grid { padding: 1rem 1rem 0 }
+ion-item { --padding-start: 0 }
+
+ion-icon {
+ margin-right: 1rem;
+ position: relative;
+ top: -1px;
+}
+
+p {
+ margin-top: .5rem;
+ 
+  & ion-text {
+  color: var(--ion-color-light-contrast);
+  font-size: 1.3rem;
+ }
+}
+
+.info { margin-top: 1rem }

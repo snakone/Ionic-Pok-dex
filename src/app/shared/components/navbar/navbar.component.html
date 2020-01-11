@@ -1,0 +1,15 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-img class="ion-padding-start" 
+             src="assets/img/pokeball.png">
+    </ion-img>
+  <ion-title>Pokédex 
+    <span *ngIf="selectedType">{{selectedType | translate}}</span>
+  </ion-title>
+  </ion-buttons>
+  <ion-buttons slot="end">
+    <ion-button (click)="openFilterModal()">
+      <ion-icon name="funnel"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>

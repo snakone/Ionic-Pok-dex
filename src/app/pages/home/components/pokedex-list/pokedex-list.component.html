@@ -1,0 +1,21 @@
+<ion-list *ngIf="!loading">
+  <ion-item *ngFor="let poke of pokedex"
+            [routerLink]="'/pokemon/'+ poke.name"
+            detail>
+    <ion-avatar slot="start">
+      <ion-img #img (ionError)="img.src = 'assets/img/no-img.png'" 
+               [src]="(poke.number | sprite)">
+      </ion-img>
+    </ion-avatar>
+    <ion-label>{{poke.name}}</ion-label>
+  </ion-item> 
+</ion-list>
+
+<app-loader *ngIf="loading"></app-loader>
+
+<ion-infinite-scroll [disabled]="selectedType?.length > 0" 
+                     threshold="50px" 
+                     (ionInfinite)="loadMoreData($event)">
+  <ion-infinite-scroll-content loadingSpinner="crescent">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
